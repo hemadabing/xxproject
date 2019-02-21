@@ -1,4 +1,4 @@
-#################### Delpoy as Host App####################
+#################### Delpoy as Host App##################################
 
 cd /opt/java/workspace/xproject 
 mvn clean
