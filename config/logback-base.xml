@@ -8,38 +8,25 @@
 			by default -->
 		<encoder>
 			<!-- %clr([%mdc{requestID:-00000000-0000-0000-0000-000000000000}]) 0000000000000000 -->
-			<pattern>%clr([${springAppName:-}:%X{X-B3-TraceId:-0000000000000000}:%X{X-B3-SpanId:-0000000000000000}:%X{X-Span-Export:-false}]){yellow} %clr(%d{yyyy-MM-dd-HH:mm:ss.SSS}){faint} %clr([%-5p]) %clr(${PID:-}){magenta} %clr([%-15.15t]){faint} %clr(---){faint} %clr([%-40.40logger{39}]){cyan} %clr([%4.4line]){blue} %clr(:){faint} %m%n%wex
+			<pattern>%clr([${springAppName:-}:%X{X-B3-TraceId:-0000000000000000}:%X{X-B3-SpanId:-0000000000000000}:%X{X-Span-Export:-false}]){yellow} %clr(%d{yyyy-MM-dd-HH:mm:ss.sdfsSSS}){faint} %clr([%-5p]) %clr(${PID:-}){magenta} %clr([%-15.15t]){faint} %clr(---){faint} %clr([%-40.40logger{39}]){cyan} %clr([%4.4line]){blue} %clr(:){faint} %m%n%wex
 			</pattern>
 		</encoder>
 	</appender>
 
 	<appender name="ROLLING_FILE_ALL"
-		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		class="ch.qos.logback.core.rolling.RollingFileAppender">sdf
 		<File>${LOG_PATH}/app.log</File>
-		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<fileNamePattern>${LOG_PATH}/app-%d{yyyyMMdd}.log.%i
-			</fileNamePattern>
-			<timeBasedFileNamingAndTriggeringPolicy
-				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
-				<maxFileSize>100MB</maxFileSize>
-			</timeBasedFileNamingAndTriggeringPolicy>
-			<maxHistory>30</maxHistory>
+		<rollingPolicy class="ch.qos.logbdfsdfsdfleSize>sdf
 			<totalSizeCap>30GB</totalSizeCap>
 		</rollingPolicy>
 		<layout class="ch.qos.logback.classic.PatternLayout">
 			<pattern>%clr([${springAppName:-}:%X{X-B3-TraceId:-0000000000000000}:%X{X-B3-SpanId:-0000000000000000}:%X{X-Span-Export:-false}]){yellow} %clr(%d{yyyy-MM-dd-HH:mm:ss.SSS}){faint} %clr([%-5p]) %clr(${PID:-}){magenta} %clr([%-15.15t]){faint} %clr(---){faint} %clr([%-40.40logger{39}]){cyan} %clr([%4.4line]){blue} %clr(:){faint} %m%n%wex
 			</pattern>
 		</layout>
-	</appender>
+	</appender>sdf
 
 	<appender name="ROLLING_FILE_INFO"
-		class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
-			<level>INFO</level>
-		</filter>
-		<File>${LOG_PATH}/app.INFO.log</File>
-		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<fileNamePattern>${LOG_PATH}/app.INFO-%d{yyyyMMdd}.log.%i
+		class="ch.qos.logback.core.rolling.RollingFilsdfsdfMdd}.log.%i
 			</fileNamePattern>
 			<timeBasedFileNamingAndTriggeringPolicy
 				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
